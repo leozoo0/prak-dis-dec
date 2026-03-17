@@ -1,17 +1,17 @@
-# 🌐 PRAKTIKUM SISTEM TERDISTRIBUSI DAN TERDESENTRALISASI
+# PRAKTIKUM SISTEM TERDISTRIBUSI DAN TERDESENTRALISASI
 
 ---
-<div align="center">
+</div>
 
-### ✨ Hafidza Nur Afifah ✨  
-**NIM:** 235410012  
-**Kelas:** Informatika 1  
+# Hafidza Nur Afifah  
+**NIM :** 235410012  
+**Kelas :** Informatika 1  
 
 </div>
 
 ---
 
-## 📌 01 – Praktikum Sistem Terdistribusi dan Terdesentralisasi
+## 📌 01 – Pentunjuk git-github
 ### 1️⃣ Instalasi dan Konfigurasi Git
 
 <br>
