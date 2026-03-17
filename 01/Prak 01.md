@@ -1,9 +1,6 @@
 # 🌐 PRAKTIKUM SISTEM TERDISTRIBUSI DAN TERDESENTRALISASI
 
 ---
-
-## 👩‍🎓 Data Mahasiswa
-
 <div align="center">
 
 ### ✨ Hafidza Nur Afifah ✨  
