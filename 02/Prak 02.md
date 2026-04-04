@@ -56,7 +56,13 @@ Gambar 4 : Proses mematikan aplikasi (Notepad) yang sedang berjalan.
 
 Untuk mematikan aplikasi tersebut melalui task manager dapat menggunakan tools end task atau dengan CMD, pada bagian ini saya menggunakan end task di bagian kanan atas task manager.
 
-4. Bagian yang saya kerjakan yakni menampilkan semua proses yang sedang berjalan untuk mengetahui aplikasi yang berjalan dan penggunaan sumber daya komputer. Selanjutnya, saya membuka Notepad, memeriksa proses baru di Task Manager, lalu mematikan proses menggunakan End Task. Proses langsung dihentikan, aplikasi tertutup, dan memori dilepaskan.
+4.
+Bagian yang saya kerjakan yakni yang pertama, menampilkan semua proses yang sedang berjalan di komputer menggunakan Task Manager. Tujuannya untuk mengetahui aplikasi apa saja yang sedang berjalan dan seberapa banyak sumber daya komputer yang digunakan, seperti CPU dan memori.
+
+Selanjutnya, saya membuka salah satu aplikasi, misalnya Notepad. Saat aplikasi dijalankan, sebuah proses baru muncul di Task Manager. Hal ini menunjukkan bahwa aplikasi sedang berjalan dan menggunakan sebagian sumber daya komputer.
+
+Kemudian, saya mematikan proses aplikasi menggunakan fitur End Task di Task Manager. Perbedaan cara ini dengan menutup aplikasi secara normal adalah proses langsung dihentikan, sehingga aplikasi langsung tertutup dan memori yang dipakai dilepaskan. 
+
 
 </div>
 
