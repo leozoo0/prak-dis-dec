@@ -11,7 +11,7 @@
 
 ---
 
-## 📌 01 – Pentunjuk git-github
+## 01 – Pentunjuk git-github
 ### 1. Instalasi dan Konfigurasi Git
 
 <br>
