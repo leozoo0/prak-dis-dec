@@ -12,7 +12,7 @@
 ---
 
 ## 📌 01 – Pentunjuk git-github
-### 1 Instalasi dan Konfigurasi Git
+### 1. Instalasi dan Konfigurasi Git
 
 <br>
 
@@ -24,7 +24,7 @@
 
 ---
 
-### 2 Mengelola Repositori Sendiri
+### 2. Mengelola Repositori Sendiri
 
 <br>
 
@@ -37,7 +37,7 @@ https://github.com/leozoo0/tugas-git1
 
 ---
 
-### 3 Mengelola Repositori Organisasi
+### 3. Mengelola Repositori Organisasi
 
 <br>
 
@@ -50,7 +50,7 @@ https://github.com/leoo-zo/project-1
 
 ---
 
-### 4 Mengelola Repositori Kolaborasi
+### 4. Mengelola Repositori Kolaborasi
 
 <br>
 
