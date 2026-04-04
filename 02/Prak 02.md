@@ -1,4 +1,4 @@
-# Praktikum Sistem Terdistribusi dan Terdesentralisasi
+# Praktikum Sistem Terdistribusi dan Terdesentralisasi/02
 
 Nama : Hafidza Nur Afifah  
 NIM  : 235410012  
