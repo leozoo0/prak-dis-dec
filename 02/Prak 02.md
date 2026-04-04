@@ -61,7 +61,7 @@ Bagian yang saya kerjakan yakni yang pertama, menampilkan semua proses yang seda
 
 Selanjutnya, saya membuka salah satu aplikasi, misalnya Notepad. Saat aplikasi dijalankan, sebuah proses baru muncul di Task Manager. Hal ini menunjukkan bahwa aplikasi sedang berjalan dan menggunakan sebagian sumber daya komputer.
 
-Kemudian, saya mematikan proses aplikasi menggunakan fitur End Task di Task Manager. Perbedaan cara ini dengan menutup aplikasi secara normal adalah proses langsung dihentikan, sehingga aplikasi langsung tertutup dan memori yang dipakai dilepaskan. 
+Kemudian, saya mematikan proses aplikasi menggunakan fitur End Task di Task Manager.
 
 
 </div>
