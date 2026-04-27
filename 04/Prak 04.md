@@ -37,3 +37,29 @@
 <br>
 <b>Gambar 4. Tampilan File env.ps1</b>
 </div>
+
+### 4.1.3 Menjalankan Docker Compose
+<div align="center">
+<img width="975" height="472" alt="gambar" src="https://github.com/user-attachments/assets/18a2ae99-6ca4-40e5-aa4f-1ffcd4b8c5de" />
+<br>
+<b>Gambar 5. Tampilan Docker Compose yang sudah running/b>
+</div>
+
+### 4.1.4 Pengujian Replikasi (Postgres)
+<div align="center">
+<img width="975" height="147" alt="gambar" src="https://github.com/user-attachments/assets/b34ccbf5-4377-4f3b-a8e1-b09dd2650665" />
+<br>
+<b>Gambar 6. Tampilan pengujian replikasi/b>
+</div>
+
+<div align="center">
+<img width="975" height="279" alt="gambar" src="https://github.com/user-attachments/assets/26c81823-46a0-41bf-a91f-147aa82aac32" />
+<br>
+<b>Gambar 7. Tampilan pada saat pengujian replikasi terhubung/b>
+</div>
+
+<div align="center">
+<img width="845" height="419" alt="gambar" src="https://github.com/user-attachments/assets/caed3602-3d71-45c6-b9e7-65498ec166d1" />
+<br>
+<b>Gambar 8. Tampilan pada saat mencoba create dan insert pada Primary/b>
+</div>
