@@ -63,3 +63,29 @@
 <br>
 <b>Gambar 8. Tampilan pada saat mencoba create dan insert pada Primary/b>
 </div>
+
+<div align="center">
+<img width="975" height="411" alt="gambar" src="https://github.com/user-attachments/assets/7878ef1a-65bf-462a-8095-44e602d0e3f8" />
+<br>
+<b>Gambar 9. Tampilan pada saat cek status replikasi/b>
+</div>
+
+<div align="center">
+<img width="975" height="411" alt="gambar" src="https://github.com/user-attachments/assets/8c0c6cfb-411c-4aab-b609-58d2727664b3" />
+<br>
+<b>Gambar 10. Tampilan pada saat cek data hasil replikasi/b>
+</div>
+
+### 4.1.5 High Availability
+<div align="center">
+<img width="975" height="240" alt="gambar" src="https://github.com/user-attachments/assets/1dfcd2c9-2fc9-424b-8fdb-a9efb7ffd327" />
+<br>
+<b>Gambar 11. Tampilan pada saat Primary di non aktifkan/b>
+</div>
+
+<div align="center">
+<img width="975" height="441" alt="gambar" src="https://github.com/user-attachments/assets/dc89e77a-75e0-45be-b1bb-999d0ed7a188" />
+<br>
+<b>Gambar 12. Tampilan pada saat Primary di non aktifkan/b>
+</div>
+
