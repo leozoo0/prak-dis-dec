@@ -89,3 +89,24 @@
 <b>Gambar 12. Tampilan pada saat Primary di non aktifkan/b>
 </div>
 
+### 4.2.5 Eksekusi Perintah SQL
+<div align="center">
+<img width="975" height="350" alt="gambar" src="https://github.com/user-attachments/assets/325409ba-d6ab-461e-bff2-67288249a8e3" />
+<br>
+<div align="center">
+<img width="975" height="394" alt="gambar" src="https://github.com/user-attachments/assets/a2fd5451-bf56-4425-923d-648b7b7ef30d" />
+<br>
+<b>Gambar 13. Tampilan koneksi ke http://localhost:10300/b>
+</div>
+
+<div align="center">
+<img width="975" height="201" alt="gambar" src="https://github.com/user-attachments/assets/00710362-4ad0-476b-aeab-a23489ac71bc" />
+<br>
+<b>Gambar 14. Tampilan pada saat file schema.sql belum running/b>
+</div>
+
+<div align="center">
+<img width="975" height="232" alt="gambar" src="https://github.com/user-attachments/assets/bff893dc-5916-4e1b-b5ca-d563c3f20cd7" />
+<br>
+<b>Gambar 15. Tampilan pada saat file schema.sql sudah running/b>
+</div>
