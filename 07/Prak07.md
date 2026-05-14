@@ -173,7 +173,7 @@ Halaman login digunakan untuk melakukan autentikasi pengguna sebelum mengakses f
 
 Tahap terakhir pengujian dilakukan dengan mencoba membuat postingan blog baru melalui aplikasi Flask.
 
-<img width="975" height="909" alt="gambar" src="https://github.com/user-attachments/assets/ee47567e-d702-482c-96d1-e1ea6298a033" />
+<img width="975" height="451" alt="gambar" src="https://github.com/user-attachments/assets/612e2023-5cc1-41e1-b0cf-a67343e2f2f2" />
 
 <p align="center"><b>Gambar 9. Proses membuat posting blog</b></p>
 
