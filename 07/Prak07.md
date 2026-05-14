@@ -177,6 +177,10 @@ Tahap terakhir pengujian dilakukan dengan mencoba membuat postingan blog baru me
 
 <p align="center"><b>Gambar 9. Proses membuat posting blog</b></p>
 
+<img width="948" height="817" alt="gambar" src="https://github.com/user-attachments/assets/2a7a3e56-36e2-42da-8340-554397d71323" />
+
+<p align="center"><b>Gambar 10. Tampilan setelah posting blog</b></p>
+
 <p align="justify">
 Gambar di atas menunjukkan proses pembuatan posting blog berhasil dilakukan. Hal ini menandakan bahwa fitur utama aplikasi Flask telah berjalan dengan baik.
 </p>
