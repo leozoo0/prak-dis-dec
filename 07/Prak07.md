@@ -38,7 +38,7 @@ AWS EC2 menyediakan layanan infrastruktur virtual berbasis cloud yang dapat digu
 
 <div align="center">
 
-<img width="975" height="169" alt="gambar" src="https://github.com/user-attachments/assets/d9c78e87-a4fc-424a-8d40-aaec790555d7" />
+
 
 **Gambar Arsitektur XaaS 3 Model Layanan Cloud Computing SaaS, PaaS, dan IaaS**
 
