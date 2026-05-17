@@ -49,7 +49,7 @@ AWS EC2 menyediakan layanan infrastruktur virtual berbasis cloud yang dapat digu
 </div>
 ```
 
-# A. PERSIAPAN AWAL
+## 1. PERSIAPAN AWAL
 ## 1. Install Tools
 
 Pada tahap awal praktikum, dilakukan instalasi beberapa tools yang dibutuhkan untuk menjalankan aplikasi berbasis Python dan Flask. Tools yang digunakan meliputi:
@@ -90,7 +90,7 @@ Folder project digunakan untuk mengorganisasi file aplikasi sehingga lebih terst
 
 ---
 
-# B. SOURCE CODE
+## 2. SOURCE CODE
 
 <p align="justify">
 Pada tahap ini source code aplikasi Flask disiapkan. Source code akan dijalankan menggunakan environment Python yang telah dibuat sebelumnya.
@@ -98,7 +98,7 @@ Pada tahap ini source code aplikasi Flask disiapkan. Source code akan dijalankan
 
 ---
 
-# C. MEMBUAT ENVIRONMENT PYTHON
+## 3. MEMBUAT ENVIRONMENT PYTHON
 
 ## 1. Membuat Virtual Environment
 Perintah untuk membuat virtual environment:
@@ -138,7 +138,7 @@ Proses instalasi dilakukan untuk memastikan seluruh library dan package yang dip
 
 ---
 
-# D. MENJALANKAN APLIKASI FLASK (LOCAL TEST)
+## 4. MENJALANKAN APLIKASI FLASK (LOCAL TEST)
 
 ## 1. Inisialisasi Database
 
@@ -184,7 +184,7 @@ Tampilan di atas menunjukkan halaman utama aplikasi Flask berhasil ditampilkan m
 
 ---
 
-# E. TESTING APLIKASI
+## TESTING APLIKASI
 
 ## 1. Register User
 
@@ -229,3 +229,31 @@ Tahap terakhir pengujian dilakukan dengan mencoba membuat postingan blog baru me
 <p align="justify">
 Gambar di atas menunjukkan proses pembuatan posting blog berhasil dilakukan. Hal ini menandakan bahwa fitur utama aplikasi Flask telah berjalan dengan baik.
 </p>
+
+<div align="justify">
+
+## 5. MEMBUAT APLIKASI MENJADI CONTAINER
+
+## 1. Membuat Image
+
+<div align="center">
+<img width="975" height="479" alt="gambar" src="https://github.com/user-attachments/assets/e45429e2-8c07-425c-a952-a6efafcb5553" />
+
+<p align="center"><b>Gambar 11. Tampilan setelah image berhasil dibuat</b></p>
+</div>
+
+## 2. Mengakses Hasil pada http://localhost:5001
+
+<div align="center">
+<img width="975" height="216" alt="gambar" src="https://github.com/user-attachments/assets/f8759822-0663-441e-9082-713a14ef934b" />
+
+<p align="center"><b>Gambar 12. Tampilan proses running pada CMD</b></p>
+</div>
+
+<div align="center">
+<img width="975" height="345" alt="gambar" src="https://github.com/user-attachments/assets/21377ab6-bd85-4424-8910-2507643b8ae7" />
+
+<p align="center"><b>Gambar 13. Tampilan akses aplikasi pada http://localhost:5001</b></p>
+</div>
+
+</div>
