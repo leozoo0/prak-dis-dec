@@ -6,7 +6,9 @@ Kelas : Informatika 1
 
 <div align="justify">
 
-## 1. SaaS (Software as a Service)
+
+## TUGAS
+### 1. SaaS (Software as a Service)
 
 ### Contoh Vendor
 - Google Workspace
@@ -16,7 +18,7 @@ Google Workspace menyediakan layanan aplikasi berbasis cloud yang dapat langsung
 
 ---
 
-## 2. PaaS (Platform as a Service)
+### 2. PaaS (Platform as a Service)
 
 ### Contoh Vendor
 - Google Cloud Platform (GCP)
@@ -26,7 +28,7 @@ Google Cloud Platform menyediakan layanan platform cloud yang membantu developer
 
 ---
 
-## 3. IaaS (Infrastructure as a Service)
+### 3. IaaS (Infrastructure as a Service)
 
 ### Contoh Vendor
 - Amazon Web Services (AWS EC2)
@@ -38,7 +40,7 @@ AWS EC2 menyediakan layanan infrastruktur virtual berbasis cloud yang dapat digu
 
 <div align="center">
 
-
+<img width="975" height="169" alt="gambar" src="https://github.com/user-attachments/assets/c6860b63-c48f-4416-812e-d18a566dfa83" />
 
 **Gambar Arsitektur XaaS 3 Model Layanan Cloud Computing SaaS, PaaS, dan IaaS**
 
