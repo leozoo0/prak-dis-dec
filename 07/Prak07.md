@@ -49,7 +49,7 @@ AWS EC2 menyediakan layanan infrastruktur virtual berbasis cloud yang dapat digu
 </div>
 ```
 
-## 1. PERSIAPAN AWAL
+# 1. PERSIAPAN AWAL
 ## 1. Install Tools
 
 Pada tahap awal praktikum, dilakukan instalasi beberapa tools yang dibutuhkan untuk menjalankan aplikasi berbasis Python dan Flask. Tools yang digunakan meliputi:
@@ -76,7 +76,7 @@ Gambar di atas menunjukkan bahwa Python, Git, dan Docker telah berhasil terinsta
 
 ---
 
-## 2. Menyiapkan Folder Project
+# 2. Menyiapkan Folder Project
 
 Tahap berikutnya adalah membuat folder project sebagai tempat penyimpanan seluruh file dan source code aplikasi Flask yang akan dikembangkan.
 
@@ -98,7 +98,7 @@ Pada tahap ini source code aplikasi Flask disiapkan. Source code akan dijalankan
 
 ---
 
-## 3. MEMBUAT ENVIRONMENT PYTHON
+# 3. MEMBUAT ENVIRONMENT PYTHON
 
 ## 1. Membuat Virtual Environment
 Perintah untuk membuat virtual environment:
@@ -138,7 +138,7 @@ Proses instalasi dilakukan untuk memastikan seluruh library dan package yang dip
 
 ---
 
-## 4. MENJALANKAN APLIKASI FLASK (LOCAL TEST)
+# 4. MENJALANKAN APLIKASI FLASK (LOCAL TEST)
 
 ## 1. Inisialisasi Database
 
@@ -232,7 +232,7 @@ Gambar di atas menunjukkan proses pembuatan posting blog berhasil dilakukan. Hal
 
 <div align="justify">
 
-## 5. MEMBUAT APLIKASI MENJADI CONTAINER
+# 5. MEMBUAT APLIKASI MENJADI CA
 
 ## 1. Membuat Image
 
