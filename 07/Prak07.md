@@ -4,6 +4,49 @@ Nama : Hafidza Nur Afifah
 NIM : 235410012  
 Kelas : Informatika 1  
 
+<div align="justify">
+
+## 1. SaaS (Software as a Service)
+
+### Contoh Vendor
+- Google Workspace
+
+### Service yang Disediakan
+Google Workspace menyediakan layanan aplikasi berbasis cloud yang dapat langsung digunakan melalui internet tanpa perlu instalasi maupun pengelolaan server. Beberapa layanan yang tersedia antara lain Gmail untuk email, Google Docs untuk pengolahan dokumen, Google Drive untuk penyimpanan data, Google Meet untuk meeting online, serta Google Sheets untuk pengolahan spreadsheet. Pada model SaaS, pengguna hanya menggunakan aplikasi, sedangkan seluruh sistem dan maintenance dikelola oleh provider cloud.
+
+---
+
+## 2. PaaS (Platform as a Service)
+
+### Contoh Vendor
+- Google Cloud Platform (GCP)
+
+### Service yang Disediakan
+Google Cloud Platform menyediakan layanan platform cloud yang membantu developer dalam membuat, menjalankan, dan mengelola aplikasi tanpa harus mengatur server secara langsung. Layanan yang tersedia meliputi App Engine untuk deployment aplikasi, Cloud SQL untuk database, Cloud Storage untuk penyimpanan data, Cloud Functions untuk menjalankan fungsi otomatis, dan Firebase Services untuk mendukung pengembangan aplikasi web maupun mobile. Pada model PaaS, developer cukup fokus pada pembuatan aplikasi karena infrastruktur dan sistem dikelola oleh provider cloud.
+
+---
+
+## 3. IaaS (Infrastructure as a Service)
+
+### Contoh Vendor
+- Amazon Web Services (AWS EC2)
+
+### Service yang Disediakan
+AWS EC2 menyediakan layanan infrastruktur virtual berbasis cloud yang dapat digunakan untuk membangun sistem dan aplikasi sesuai kebutuhan pengguna. Layanan yang tersedia meliputi Virtual Machine (VM), storage, networking, firewall, dan load balancer. Pada model IaaS, pengguna memiliki kontrol penuh terhadap sistem operasi, konfigurasi server, dan aplikasi yang digunakan, sedangkan perangkat keras fisik tetap dikelola oleh provider cloud.
+
+---
+
+<div align="center">
+
+<img width="975" height="169" alt="gambar" src="https://github.com/user-attachments/assets/d9c78e87-a4fc-424a-8d40-aaec790555d7" />
+
+**Gambar Arsitektur XaaS 3 Model Layanan Cloud Computing SaaS, PaaS, dan IaaS**
+
+</div>
+
+</div>
+```
+
 # A. PERSIAPAN AWAL
 ## 1. Install Tools
 
