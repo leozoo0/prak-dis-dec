@@ -1,5 +1,5 @@
 
-# Praktikum Sistem Terdistribusi dan Terdesentralisasi/07
+# Praktikum Sistem Terdistribusi dan Terdesentralisasi/08
 
 **Nama :** Hafidza Nur Afifah  
 **NIM :** 235410012  
@@ -7,7 +7,7 @@
 
 <div align="justify">
 
-# Modul 8 — Arsitektur Microservices untuk Sistem Terdistribusi (Versi Windows)
+# Arsitektur Microservices untuk Sistem Terdistribusi (Versi Windows)
 
 ---
 
@@ -17,7 +17,7 @@
 
 ### 1. Download Python
 
-Download Python melalui website resmi Python kemudian lakukan instalasi seperti biasa. Pada saat instalasi, centang opsi **Add Python to PATH** agar Python dapat dijalankan melalui Command Prompt.
+Download Python melalui website resmi Python.
 
 ---
 
