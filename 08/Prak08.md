@@ -11,7 +11,7 @@ Kelas : Informatika 1
 
 # 1. Prasyarat
 
-## A. Install Python dan UV di Windows
+## A. Install Python dan UV
 
 ### 1. Download Python
 
