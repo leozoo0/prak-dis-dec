@@ -306,20 +306,20 @@ Pada tugas ini dibuat tabel baru bernama `produk` yang memiliki tipe data INT, C
 CREATE TABLE produk (
     id INTEGER PRIMARY KEY,
     kode CHAR(5),
-    nama VARCHAR(50),
-    stok INT,
-    tersedia BOOLEAN,
-    harga FLOAT
+    judul VARCHAR(50),
+    durasi INT,
+    tayang BOOLEAN,
+    rating FLOAT
 );
 ```
 
 <div align="center">
-
-<img width="975" height="387" alt="gambar" src="https://github.com/user-attachments/assets/55331ca2-96e2-4c77-b2e1-cefe3f3d8700" />
+    
+<img width="975" height="375" alt="gambar" src="https://github.com/user-attachments/assets/fac40a7b-cef9-4430-b0ab-790061242fac" />
 
 <br>
 
-**Gambar 11. Pembuatan tabel produk**
+**Gambar 11. Tampilan tabel produk**
 
 </div>
 
@@ -330,28 +330,27 @@ CREATE TABLE produk (
 Buat file `insert_produk.py` untuk mengisikan data ke tabel produk.
 
 <div align="center">
-
-<img width="975" height="845" alt="gambar" src="https://github.com/user-attachments/assets/7a59816b-d483-4a05-9198-0e90fce79af0" />
-
+<img width="975" height="851" alt="gambar" src="https://github.com/user-attachments/assets/5c748e43-8db8-4b5f-990a-209730b1aec2" />
 <br>
 
-**Gambar 12. Tampilan file insert_produk.py**
+**Gambar 12. Tampilan file insert_data.py**
 
 </div>
 
 Jalankan script berikut.
 
 ```bash
-python insert_produk.py
+python insert_data.py
 ```
 
 <div align="center">
 
-<img width="975" height="136" alt="gambar" src="https://github.com/user-attachments/assets/673d9281-3e66-4874-b92a-bf5e26cd0e36" />
+
+<img width="975" height="545" alt="gambar" src="https://github.com/user-attachments/assets/10755df6-a6f9-4ec8-b883-7677fbafcaf6" />
 
 <br>
 
-**Gambar 13. Menambahkan data produk**
+**Gambar 13. Menambahkan data Film**
 
 </div>
 
@@ -359,15 +358,14 @@ python insert_produk.py
 
 ## 3. Membuat RESTful API Endpoint
 
-Buat endpoint baru `/produk/` pada FastAPI dengan nama file `main.py` untuk menampilkan seluruh data produk.
+Buat endpoint baru `/film/` pada FastAPI dengan nama file `main.py` untuk menampilkan seluruh data film.
 
 <div align="center">
-
-<img width="975" height="923" alt="gambar" src="https://github.com/user-attachments/assets/63f892a5-c251-4ba2-b9fd-fea41019f6ec" />
+<img width="975" height="954" alt="gambar" src="https://github.com/user-attachments/assets/1799b4b6-5768-47bd-a2f9-c71b87476644" />
 
 <br>
 
-**Gambar 14. Tampilan file main.py endpoint REST API produk**
+**Gambar 14. Tampilan file main.py endpoint REST API film**
 
 </div>
 
@@ -378,14 +376,14 @@ Buat endpoint baru `/produk/` pada FastAPI dengan nama file `main.py` untuk mena
 Gunakan perintah berikut untuk menampilkan endpoint produk menggunakan curl.
 
 ```bash
-curl http://127.0.0.1:8000/produk/
+curl http://127.0.0.1:8000/data/
 ```
 
 Hasil endpoint akan tampil dalam format JSON.
 
 <div align="center">
 
-<img width="975" height="94" alt="gambar" src="https://github.com/user-attachments/assets/1e5f0216-aadc-4255-b008-2f736ad84dc3" />
+<img width="975" height="107" alt="gambar" src="https://github.com/user-attachments/assets/feabd918-ff06-44dc-bcfd-972d475d0c2a" />
 
 <br>
 
@@ -393,14 +391,14 @@ Hasil endpoint akan tampil dalam format JSON.
 
 <br><br>
 
-<img width="975" height="1241" alt="gambar" src="https://github.com/user-attachments/assets/ba308896-a52c-45ec-9807-33bb5bd4d41e" />
+<img width="975" height="125" alt="gambar" src="https://github.com/user-attachments/assets/5c94768f-b67d-4a57-a9fe-d8ac3d9bedbe" />
 
 <br><br>
 
-<img width="975" height="359" alt="gambar" src="https://github.com/user-attachments/assets/c862ad6c-15c7-4d03-bd59-0e322bbacb78" />
+<img width="975" height="1203" alt="gambar" src="https://github.com/user-attachments/assets/046dfdd9-a9e8-4abf-8c40-4a87bdb8180e" />
 
 <br>
 
-**Gambar 16. Tampilan pada browser [http://127.0.0.1:8000/produk/](http://127.0.0.1:8000/produk/)**
+**Gambar 16. Tampilan pada browser [http://127.0.0.1:8000/data/]**
 
 </div>
