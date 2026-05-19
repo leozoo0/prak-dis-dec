@@ -300,10 +300,10 @@ microservices-fastapi/
 
 ## 1. Membuat Tabel Baru Menggunakan SQLite
 
-Pada tugas ini dibuat tabel baru bernama `produk` yang memiliki tipe data INT, CHAR, VARCHAR, BOOLEAN, dan FLOAT.
+Pada tugas ini dibuat tabel baru bernama `data` yang memiliki tipe data INT, CHAR, VARCHAR, BOOLEAN, dan FLOAT.
 
 ```sql
-CREATE TABLE produk (
+CREATE TABLE data (
     id INTEGER PRIMARY KEY,
     kode CHAR(5),
     judul VARCHAR(50),
@@ -319,7 +319,7 @@ CREATE TABLE produk (
 
 <br>
 
-**Gambar 11. Tampilan tabel produk**
+**Gambar 11. Tampilan tabel data**
 
 </div>
 
@@ -399,6 +399,6 @@ Hasil endpoint akan tampil dalam format JSON.
 
 <br>
 
-**Gambar 16. Tampilan pada browser [http://127.0.0.1:8000/data/]**
+**Gambar 16. Tampilan pada browser http://127.0.0.1:8000/data/**
 
 </div>
