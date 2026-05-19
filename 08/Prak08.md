@@ -327,7 +327,7 @@ CREATE TABLE data (
 
 ## 2. Mengisi 5 Data Menggunakan Script Python
 
-Buat file `insert_produk.py` untuk mengisikan data ke tabel produk.
+Buat file `insert_data.py` untuk mengisikan data ke tabel produk.
 
 <div align="center">
 <img width="975" height="851" alt="gambar" src="https://github.com/user-attachments/assets/5c748e43-8db8-4b5f-990a-209730b1aec2" />
@@ -337,7 +337,7 @@ Buat file `insert_produk.py` untuk mengisikan data ke tabel produk.
 
 </div>
 
-Jalankan script berikut.
+Jalankan script berikut,
 
 ```bash
 python insert_data.py
