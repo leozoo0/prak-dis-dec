@@ -298,7 +298,7 @@ microservices-fastapi/
 
 ---
 
-# Tugas Tambahan
+# Tugas 
 
 ## 1. Membuat Tabel Baru Menggunakan SQLite
 
