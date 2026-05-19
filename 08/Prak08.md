@@ -1,13 +1,11 @@
 
 # Praktikum Sistem Terdistribusi dan Terdesentralisasi/08
 
-**Nama :** Hafidza Nur Afifah  
-**NIM :** 235410012  
-**Kelas :** Informatika 1  
+Nama : Hafidza Nur Afifah  
+NIM : 235410012  
+Kelas : Informatika 1  
 
 <div align="justify">
-
-# Arsitektur Microservices untuk Sistem Terdistribusi (Versi Windows)
 
 ---
 
@@ -406,12 +404,3 @@ Hasil endpoint akan tampil dalam format JSON.
 **Gambar 16. Tampilan pada browser [http://127.0.0.1:8000/produk/](http://127.0.0.1:8000/produk/)**
 
 </div>
-
----
-
-# Kesimpulan
-
-Pada praktikum ini berhasil dibuat sebuah REST API sederhana menggunakan FastAPI dan SQLite pada sistem operasi Windows. REST API dapat digunakan untuk menampilkan data SDM maupun data produk menggunakan endpoint tertentu. Selain itu, pengujian endpoint juga dapat dilakukan menggunakan browser maupun command line menggunakan curl.
-
-</div>
-```
