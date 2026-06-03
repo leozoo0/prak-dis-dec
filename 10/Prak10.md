@@ -14,7 +14,7 @@
 **Gambar 0.1 Halaman Unduhan YugabyteDB**
 </div>
 
-Pada tahap ini dilakukan pengunduhan YugabyteDB melalui situs resmi Yugabyte. Versi yang digunakan adalah Long-Term Support (LTS) karena lebih stabil dan cocok digunakan untuk pembelajaran konsep data terdistribusi. File instalasi dipilih sesuai dengan sistem operasi yang digunakan.
+YugabyteDB diunduh melalui terminal langsung menggunakan perintah wget yang menyalin URL dari situs resmi. Terlihat pada screenshot bahwa file yang diunduh adalah yugabyte-2025.2.3.0-b149-linux-x86_64.tar.gz dengan ukuran 457 MB. Proses unduhan selesai dalam 1 menit 41 detik dengan kecepatan rata-rata 5.61 MB/s, dan diakhiri dengan konfirmasi yugabyte-2025.2.3.0-b149-linux-x86_64.tar.gz: OK yang menandakan file berhasil diunduh
 
 # 1. Instalasi
 
@@ -36,7 +36,7 @@ Pada langkah ini file hasil unduhan diekstrak sehingga seluruh komponen Yugabyte
 **Gambar 1.2 Pemindahan Direktori YugabyteDB**
 </div>
 
-Direktori hasil ekstraksi dipindahkan ke lokasi penyimpanan khusus agar lebih terorganisir. Penempatan pada direktori tertentu memudahkan proses konfigurasi dan pengelolaan YugabyteDB di sistem operasi.
+Direktori hasil ekstraksi dipindahkan ke lokasi penyimpanan khusus agar lebih terorganisir. Pada bagian ini terlihat adanya error berupa Check failure stack trace yang muncul saat proses pemindahan direktori. Error ini berasal dari komponen yb::tserver::TabletServerMain yang menunjukkan ada masalah saat node tablet server mencoba berjalan. Setelah dilakukan pengecekan log dengan perintah tail -50 yugabyted.log, masalah dapat diidentifikasi dan proses dilanjutkan ke tahap berikutnya.
 
 ## 1.3 Menjalankan post_install.sh
 
@@ -46,7 +46,7 @@ Direktori hasil ekstraksi dipindahkan ke lokasi penyimpanan khusus agar lebih te
 **Gambar 1.3 Menjalankan Script post_install.sh**
 </div>
 
-Script post_install.sh dijalankan untuk melakukan konfigurasi tambahan yang dibutuhkan oleh YugabyteDB. Proses ini memastikan seluruh dependensi dan pengaturan sistem telah siap digunakan.
+Script post_install.sh dijalankan untuk melakukan konfigurasi tambahan yang dibutuhkan oleh YugabyteDB. Proses ini memastikan seluruh dependensi dan pengaturan sistem telah siap digunakan. Semua komponen menampilkan status Pass dan diakhiri dengan INSTALL PASSED, yang berarti instalasi YugabyteDB telah berhasil dan semua dependensi berjalan dengan baik.
 
 ## 1.4 Membuat Environment Variables
 
@@ -60,8 +60,6 @@ Environment variable dibuat agar perintah YugabyteDB dapat dijalankan dari termi
 
 ## 1.5 Mengubah Ulimit
 
-**Gambar 1.5 Konfigurasi Ulimit**
-
 Pada tahap ini dilakukan penyesuaian nilai ulimit sesuai petunjuk modul. Pengaturan tersebut diperlukan agar YugabyteDB dapat menggunakan sumber daya sistem secara optimal, terutama terkait jumlah file dan proses yang dapat dibuka secara bersamaan.
 
 # 2. Membuat Kluster
@@ -72,7 +70,7 @@ Pada tahap ini dilakukan penyesuaian nilai ulimit sesuai petunjuk modul. Pengatu
 **Gambar 2.1 Persiapan Kluster YugabyteDB**
 </div>
 
-Pada praktikum ini dibuat kluster yang terdiri dari tiga node. Setiap node memiliki direktori penyimpanan sendiri sehingga data dapat didistribusikan dan direplikasi antar node.
+Pada praktikum ini dibuat kluster yang terdiri dari tiga node. Sebelum menjalankan node, direktori penyimpanan data untuk setiap node dibuat terlebih dahulu dengan perintah mkdir -p ~/var/node1, mkdir -p ~/var/node2, dan mkdir -p ~/var/node3. Hasil pengecekan dengan ls ~/var menampilkan direktori conf, data, logs, node1, node2, dan node3 yang sudah siap digunakan.
 
 ## 2.1 Node 1
 
@@ -82,7 +80,7 @@ Pada praktikum ini dibuat kluster yang terdiri dari tiga node. Setiap node memil
 **Gambar 2.2 Pembuatan Node 1**
 </div>
 
-Node pertama dijalankan sebagai node utama dalam kluster. Node ini menjadi titik awal yang akan digunakan oleh node lainnya untuk bergabung ke dalam sistem terdistribusi.
+Node pertama dijalankan sebagai node utama dalam kluster. Node ini menjadi titik awal yang akan digunakan oleh node lainnya untuk bergabung ke dalam sistem terdistribusi. Output menunjukkan YugabyteDB Started, UI ready, dan Data placement constraint successfully verified. Terdapat beberapa peringatan (WARNINGS) seperti transparent hugepages yang belum diaktifkan dan ntp/chrony yang belum terpasang, namun tidak menghalangi node berjalan. Status akhir menunjukkan Status: Running, YSQL Status: Ready, Replication Factor: 1, dan YugabyteDB UI tersedia di http://127.0.0.1:15433. Data disimpan di /root/var/node1/data.
 
 ## 2.2 Node 2
 
@@ -92,7 +90,7 @@ Node pertama dijalankan sebagai node utama dalam kluster. Node ini menjadi titik
 **Gambar 2.3 Pembuatan Node 2**
 </div>
 
-Node kedua ditambahkan ke kluster menggunakan parameter join yang mengarah ke node pertama. Dengan bergabungnya node kedua, proses distribusi dan replikasi data mulai dapat dilakukan.
+Node kedua ditambahkan ke kluster menggunakan parameter join yang mengarah ke node pertama. Dengan bergabungnya node kedua, proses distribusi dan replikasi data mulai dapat dilakukan. Terlihat pada output bahwa node berhasil mendeteksi konfigurasi dari node pertama melalui parameter --join dengan pesan Fetching configs from join IP... dan Node joined a running cluster with UUID d0fe38cb-7c5f-4a68-914d-7bf4e17cd0b4. Status menunjukkan Running dan Ready dengan Replication Factor yang masih 1, serta data tersimpan di /root/var/node2/data.
 
 ## 2.3 Node 3
 
@@ -102,7 +100,7 @@ Node kedua ditambahkan ke kluster menggunakan parameter join yang mengarah ke no
 **Gambar 2.4 Pembuatan Node 3**
 </div>
 
-Node ketiga ditambahkan untuk melengkapi konfigurasi kluster tiga node. Konfigurasi ini mendukung fault tolerance sehingga sistem tetap tersedia walaupun salah satu node mengalami gangguan.
+Node ketiga ditambahkan untuk melengkapi konfigurasi kluster tiga node. Konfigurasi ini mendukung fault tolerance sehingga sistem tetap tersedia walaupun salah satu node mengalami gangguan. Setelah node ketiga bergabung, Replication Factor otomatis naik menjadi 3, artinya setiap data kini direplikasi ke ketiga node sekaligus. Status menunjukkan Running dan Ready, data tersimpan di /root/var/node3/data, dan Universe UUID sama dengan node sebelumnya yaitu d0fe38cb-7c5f-4a68-914d-7bf4e17cd0b4 yang membuktikan ketiganya tergabung dalam satu kluster yang sama.
 
 ## 2.4 Data Placement
 
@@ -112,7 +110,8 @@ Node ketiga ditambahkan untuk melengkapi konfigurasi kluster tiga node. Konfigur
 **Gambar 2.5 Konfigurasi Data Placement**
 </div>
 
-Data placement digunakan untuk mengatur lokasi penyimpanan replika data pada setiap node. Pengaturan ini membantu meningkatkan ketersediaan data dan toleransi terhadap kegagalan sistem.
+Data placement digunakan untuk mengatur lokasi penyimpanan replika data pada setiap node. Hasilnya menampilkan Status: Configuration successful dan Fault Tolerance: Primary Cluster can survive at most any 1 availability zone failure. Artinya kluster ini sudah terkonfigurasi untuk tetap bisa beroperasi meskipun salah satu dari tiga zone (node) mengalami kegagalan.
+Setelah semua node aktif, Web UI YugabyteDB dapat diakses di http://localhost:15433. Tampilan dashboard menunjukkan 3 nodes running, 13 tablets, Replication Factor 3, database version v2025.2.3.0, dan terdapat peringatan transparent hugepages yang disabled namun tidak berdampak pada jalannya sistem.
 
 <div align="center">
 <img width="975" height="473" alt="gambar" src="https://github.com/user-attachments/assets/1467101c-eebe-41da-a60d-7170312e547a" />
@@ -120,7 +119,7 @@ Data placement digunakan untuk mengatur lokasi penyimpanan replika data pada set
 **Gambar 2.6 Tampilan Web UI YugabyteDB**
 </div>
 
-Setelah seluruh node aktif, status kluster dapat dipantau melalui antarmuka web YugabyteDB. Halaman ini menampilkan informasi node, tablet, dan kondisi kluster secara keseluruhan.
+Setelah seluruh node aktif, status kluster dapat dipantau melalui web YugabyteDB. Halaman ini menampilkan informasi node, tablet, dan kondisi kluster secara keseluruhan.
 
 # 3. Sharding
 
@@ -132,7 +131,7 @@ Setelah seluruh node aktif, status kluster dapat dipantau melalui antarmuka web 
 **Gambar 3.1 Implementasi Range Sharding**
 </div>
 
-Range sharding membagi data berdasarkan rentang nilai primary key. Data dengan nilai yang berdekatan akan ditempatkan pada tablet yang sama sehingga query berbasis rentang dapat dijalankan lebih efisien.
+Range sharding membagi data berdasarkan rentang nilai primary key. Primary key bertipe ASC menandakan penggunaan range sharding. Data kemudian diisi dengan 6 baris (user range 1 hingga user range 6) menggunakan perintah INSERT, dan hasil SELECT menampilkan data tersimpan berurutan sesuai id dari 1 sampai 6.
 
 ## 3.2 Range Sharding dengan Split
 
@@ -142,7 +141,7 @@ Range sharding membagi data berdasarkan rentang nilai primary key. Data dengan n
 **Gambar 3.2 Range Sharding Menggunakan Split**
 </div>
 
-Perintah SPLIT digunakan untuk membagi tabel menjadi beberapa tablet sejak awal pembuatan tabel. Dengan cara ini distribusi data menjadi lebih merata dan performa query tertentu dapat meningkat.
+Perintah SPLIT digunakan untuk membagi tabel menjadi beberapa tablet sejak awal pembuatan tabel. Pembagian ini membuat distribusi data lebih merata dan mempercepat query pada rentang nilai tertentu.
 
 ## 3.3 Explain Query Semua Data
 
@@ -152,7 +151,7 @@ Perintah SPLIT digunakan untuk membagi tabel menjadi beberapa tablet sejak awal 
 **Gambar 3.3 Query Seluruh Data pada Range Sharding**
 </div>
 
-Hasil EXPLAIN menunjukkan bahwa seluruh data pada tabel dibaca karena query meminta semua baris. Oleh sebab itu sistem melakukan pemindaian terhadap seluruh data yang tersedia.
+Perintah EXPLAIN (ANALYZE, DIST, COSTS OFF) SELECT * FROM user_range menghasilkan query plan dengan Seq Scan (sequential scan). Terlihat nilai Storage Table Rows Scanned: 6 yang berarti sistem membaca semua 6 baris. Hal ini wajar karena tidak ada kondisi filter, sehingga seluruh tablet perlu dipindai. Execution Time tercatat 450.142 ms.
 
 ## 3.4 Explain Query Satu Data
 
@@ -162,7 +161,7 @@ Hasil EXPLAIN menunjukkan bahwa seluruh data pada tabel dibaca karena query memi
 **Gambar 3.4 Query Satu Data pada Range Sharding**
 </div>
 
-Pada query yang menggunakan kondisi primary key tertentu, YugabyteDB hanya membaca satu baris data yang diperlukan. Hal ini menunjukkan efisiensi range sharding untuk pencarian data spesifik.
+Perintah EXPLAIN untuk SELECT * FROM user_range WHERE id=1 menghasilkan query plan dengan Index Scan using user_range_pkey. Nilai Storage Table Rows Scanned: 1 membuktikan hanya 1 baris yang dibaca. Range sharding sangat efisien untuk pencarian data spesifik karena sistem langsung menuju lokasi tablet yang sesuai berdasarkan primary key, dengan Execution Time hanya 1.203 ms.
 
 ## 3.5 Explain Query Range
 
@@ -172,7 +171,7 @@ Pada query yang menggunakan kondisi primary key tertentu, YugabyteDB hanya memba
 **Gambar 3.5 Query Range pada Range Sharding**
 </div>
 
-Hasil EXPLAIN menunjukkan bahwa hanya data sesuai rentang yang diminta yang dibaca. Mekanisme ini menjadikan range sharding sangat cocok untuk query berbasis rentang nilai.
+Perintah EXPLAIN untuk SELECT * FROM user_range WHERE id > 2 AND id < 6 menghasilkan Index Scan dengan kondisi ((id > 2) AND (id < 6)). Nilai Storage Table Rows Scanned: 3 membuktikan sistem hanya membaca 3 baris yang sesuai rentang, tidak memindai semua data. Ini adalah keunggulan utama range sharding: efisien untuk query berbasis rentang nilai dengan Execution Time 0.714 ms.
 
 ## 3.6 Hash Sharding - Query Semua Data
 
@@ -182,7 +181,7 @@ Hasil EXPLAIN menunjukkan bahwa hanya data sesuai rentang yang diminta yang diba
 **Gambar 3.6 Query Seluruh Data pada Hash Sharding**
 </div>
 
-Pada hash sharding, data tersebar ke beberapa tablet berdasarkan hasil fungsi hash. Saat seluruh data diminta, sistem akan mengakses seluruh tablet yang tersedia.
+Tabel user_hash dibuat dengan primary key tanpa ASC/DESC (id INT PRIMARY KEY) yang berarti menggunakan hash sharding secara default. Pada hash sharding saat seluruh data diminta, sistem akan mengakses seluruh tablet yang tersedia. Data diisi dengan 6 baris (id 1–6 dengan username A–F). Perintah EXPLAIN SELECT * FROM user_hash menghasilkan Seq Scan dengan Storage Table Rows Scanned: 6. Sama seperti range sharding, query tanpa filter membaca seluruh data dengan Execution Time 0.678 ms.
 
 ## 3.7 Hash Sharding - Query Satu Data
 
@@ -192,7 +191,7 @@ Pada hash sharding, data tersebar ke beberapa tablet berdasarkan hasil fungsi ha
 **Gambar 3.7 Query Satu Data pada Hash Sharding**
 </div>
 
-Untuk pencarian satu data berdasarkan primary key, hash sharding tetap mampu bekerja secara efisien karena lokasi data dapat ditentukan melalui proses hashing.
+Perintah EXPLAIN untuk SELECT * FROM user_hash WHERE id=1 menghasilkan Index Scan using user_hash_pkey dengan Storage Table Rows Scanned: 1. Hash sharding tetap efisien untuk pencarian berdasarkan primary key karena lokasi tablet dapat langsung dihitung dari fungsi hash nilai id tersebut, dengan Execution Time 1.265 ms.
 
 ## 3.8 Hash Sharding - Query Range
 
@@ -202,7 +201,7 @@ Untuk pencarian satu data berdasarkan primary key, hash sharding tetap mampu bek
 **Gambar 3.8 Query Range pada Hash Sharding**
 </div>
 
-Hasil EXPLAIN menunjukkan bahwa query rentang kurang efisien pada hash sharding karena sistem perlu membaca data dari banyak tablet. Oleh karena itu metode ini kurang cocok untuk query berbasis rentang.
+Hasil EXPLAIN menunjukkan bahwa query rentang kurang efisien pada hash sharding karena sistem perlu membaca data dari banyak tablet. Meskipun yang dibutuhkan hanya 3 baris, sistem tetap memindai semua 6 baris karena hash mengacak lokasi data di tablet sehingga tidak ada cara efisien untuk langsung menemukan data dalam suatu rentang nilai. Execution Time tercatat 1.566 ms.
 
 # 4. Shutdown YugabyteDB
 
