@@ -1,4 +1,8 @@
-# Modul 11
+# Praktikum Sistem Terdistribusi dan Terdesentralisasi/11
+
+**Nama : Hafidza Nur Afifah**  
+**NIM : 235410012**  
+**Kelas : Informatika 1**
 
 ## Tugas 1
 
