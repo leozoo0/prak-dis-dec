@@ -1,4 +1,10 @@
-# Modul 12 - Teknologi P2P (Peer-to-Peer)
+# Praktikum Sistem Terdistribusi dan Terdesentralisasi/12
+
+**Nama : Hafidza Nur Afifah**  
+**NIM : 235410012**  
+**Kelas : Informatika 1**
+
+### Modul 12 - Teknologi P2P (Peer-to-Peer)
 
 ### 0. Pengantar Teknologi P2P
 
