@@ -1,4 +1,3 @@
-# Smart Contract pada Blockchain Solana
 
 ## 1. Pengantar
 
@@ -254,3 +253,130 @@ anchor deploy
 </p>
 
 Setelah deployment berhasil, program akan memiliki **Program ID** yang dapat digunakan untuk melihat informasi smart contract melalui **Solana Explorer Devnet**. Tetapi pada praktikum ini deploy gagal, dikarenakan saldo SOL 0.
+
+---
+
+# 4. Smart Contract Ethereum Menggunakan Hardhat
+
+## 4.1 Deskripsi
+
+Repository ini dibuat untuk memenuhi tugas praktikum **Smart Contract pada Blockchain** dengan mereplikasi tahapan pengembangan smart contract menggunakan blockchain **Ethereum** sebagai alternatif dari implementasi Solana pada modul praktikum.
+
+Pengembangan smart contract dilakukan menggunakan **Hardhat** sebagai framework pengembangan Ethereum dan bahasa pemrograman **Solidity**. Smart contract yang dibuat merupakan contoh sederhana berupa kontrak **HelloWorld** yang menyimpan sebuah pesan (`message`) dan menyediakan fungsi untuk memperbarui isi pesan tersebut.
+
+---
+
+# Struktur Repository
+
+```text
+tugas_ethereum/
+│
+├── contracts/
+│   └── HelloWorld.sol
+│
+├── scripts/
+├── hardhat.config.ts
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+├── README.md
+└── screenshots/
+```
+
+---
+
+## 4.2 Membuat Proyek Hardhat
+
+Langkah pertama yakni membuat proyek baru menggunakan Hardhat.
+
+```bash
+mkdir tugas_ethereum
+cd tugas_ethereum
+npm init -y
+npm install --save-dev hardhat
+npx hardhat --init
+```
+
+Pada proses inisialisasi dipilih template **Minimal Hardhat Project** sehingga dihasilkan struktur proyek dasar yang siap digunakan untuk pengembangan smart contract.
+
+<p align="center">
+<img width="975" height="549" alt="gambar" src="https://github.com/user-attachments/assets/abb183b8-cffe-4ab7-97f3-6ede2f96888c" />
+</p>
+
+<p align="center">
+<b>Gambar 12.</b> Proses inisialisasi proyek Hardhat.
+</p>
+
+Gambar 12 memperlihatkan proses pembuatan proyek menggunakan Hardhat. Setelah proses inisialisasi selesai, Hardhat secara otomatis menghasilkan beberapa file konfigurasi seperti `hardhat.config.ts`, `package.json`, dan direktori yang akan digunakan selama proses pengembangan.
+
+---
+
+## 4.3 Membuat Smart Contract
+
+Setelah proyek berhasil dibuat, langkah selanjutnya adalah membuat direktori `contracts` dan menambahkan file **HelloWorld.sol**.
+
+```text
+contracts/
+└── HelloWorld.sol
+```
+
+Isi smart contract adalah sebagai berikut.
+
+<p align="center">
+<img width="975" height="564" alt="gambar" src="https://github.com/user-attachments/assets/b8f8296a-34d2-41db-b070-ac1d1de7691d" />
+
+</p>
+
+<p align="center">
+<b>Gambar 13.</b> isi file HelloWorld.sol
+</p>
+
+Gambar 13 menunjukkan proses penulisan smart contract menggunakan bahasa Solidity. Smart contract tersebut memiliki sebuah variabel bertipe string bernama `message` yang digunakan untuk menyimpan pesan, serta fungsi `setMessage()` yang berfungsi memperbarui isi pesan tersebut.
+
+---
+
+## 4.4 Konfigurasi Hardhat
+
+Hardhat memerlukan file konfigurasi agar mengetahui versi compiler Solidity yang digunakan.
+
+<p align="center">
+<img width="559" height="153" alt="gambar" src="https://github.com/user-attachments/assets/95e1088a-f2d9-41f7-8b70-b8d0e43ff9ed" />
+</p>
+
+<p align="center">
+<b>Gambar 14.</b> Tampilan file hardhat.config.ts
+</p>
+
+Gambar 14 menunjukkan konfigurasi Hardhat dengan compiler Solidity versi **0.8.28**. Penentuan versi compiler bertujuan agar proses kompilasi menggunakan versi Solidity yang sesuai dengan source code yang telah dibuat.
+
+---
+
+## 4.5 Kompilasi Smart Contract
+
+Setelah smart contract selesai dibuat, langkah berikutnya adalah melakukan kompilasi menggunakan Hardhat.
+
+```bash
+npx hardhat compile --force
+```
+
+Hasil kompilasi yang berhasil akan menghasilkan pesan:
+
+```text
+Compiled 1 Solidity file with solc 0.8.28 (evm target: cancun)
+```
+
+<p align="center">
+<img width="929" height="191" alt="gambar" src="https://github.com/user-attachments/assets/cb7dbc5c-6c33-40d1-9dc2-9df7ee82a3e6" />
+</p>
+
+<p align="center">
+<b>Gambar 15.</b> Hasil kompilasi smart contract.
+</p>
+
+Gambar 15 menunjukkan bahwa source code dapat diterjemahkan menjadi bytecode Ethereum.
+
+---
+
+# Kesimpulan
+
+Implementasi smart contract menggunakan Ethereum berhasil dilakukan menggunakan framework Hardhat. Tahapan yang dilakukan meliputi pembuatan proyek, penulisan smart contract menggunakan Solidity, konfigurasi compiler, serta proses kompilasi. Hasil kompilasi menunjukkan bahwa smart contract berhasil dibangun.
