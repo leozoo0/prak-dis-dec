@@ -169,14 +169,6 @@ solana program deploy target/deploy/hello_solana.so
 </p>
 
 <p align="center">
-<img width="975" height="516" alt="gambar" src="https://github.com/user-attachments/assets/e4e0e6b7-94c8-4d99-8ead-fa7523b55fdf" />
-</p>
-
-<p align="center">
-<img width="975" height="482" alt="gambar" src="https://github.com/user-attachments/assets/04eeae2f-332f-49c5-a93e-c2509b7ba4bd" />
-</p>
-
-<p align="center">
   <b>Gambar 7.</b> Proses deployment smart contract ke jaringan lokal Solana.
 </p>
 
