@@ -1,3 +1,10 @@
+# Praktikum Sistem Terdistribusi dan Terdesentralisasi/12
+
+**Nama : Hafidza Nur Afifah**  
+**NIM : 235410012**  
+**Kelas : Informatika 1**
+
+### Modul 14
 
 ## 1. Pengantar
 
@@ -9,9 +16,9 @@ Praktikum ini bertujuan untuk memahami konsep dasar pembuatan smart contract, pr
 
 ---
 
-# 2. Smart Contract Solana Native Rust
+## 2. Smart Contract Solana Native Rust
 
-## 2.1 Membuat Project Rust
+### 2.1 Membuat Project Rust
 
 Langkah pertama adalah membuat project baru menggunakan Cargo sebagai package manager bawaan Rust. Project dibuat menggunakan perintah berikut:
 
@@ -33,7 +40,7 @@ Perintah tersebut digunakan untuk membuat project library Rust baru bernama `hel
 
 ---
 
-## 2.2 Konfigurasi Cargo.toml
+### 2.2 Konfigurasi Cargo.toml
 
 Setelah project berhasil dibuat, dilakukan konfigurasi pada file `Cargo.toml`. Konfigurasi ini bertujuan agar project dapat dikompilasi menjadi library yang dapat digunakan oleh Solana.
 
@@ -56,7 +63,7 @@ Konfigurasi `crate-type` digunakan agar hasil kompilasi Rust dapat menghasilkan 
 
 ---
 
-## 2.3 Membuat Source Code Smart Contract
+### 2.3 Membuat Source Code Smart Contract
 
 File utama smart contract berada pada `src/lib.rs`. Source code yang digunakan merupakan program yang menampilkan pesan **"Hello, world!"** ketika smart contract dijalankan.
 
@@ -74,7 +81,7 @@ Pada source code tersebut terdapat fungsi `process_instruction()` yang berfungsi
 
 ---
 
-## 2.4 Build Smart Contract
+### 2.4 Build Smart Contract
 
 Setelah source code selesai dibuat, tahap berikutnya adalah melakukan proses kompilasi menggunakan perintah:
 
@@ -103,7 +110,7 @@ Hasil dari proses build dapat dibuka pada folder `target/deploy`.
 
 ---
 
-## 2.5 Hasil Build
+### 2.5 Hasil Build
 
 <p align="center">
 <img width="706" height="169" alt="gambar" src="https://github.com/user-attachments/assets/2c9cddaf-4581-46e6-82af-38ddee6ddff1" />
@@ -123,7 +130,7 @@ Dari proses build dihasilkan dua file utama, yaitu:
 
 ---
 
-## 2.6 Pengujian Smart Contract
+### 2.6 Pengujian Smart Contract
 
 Pengujian dilakukan menggunakan library **LiteSVM** untuk memastikan smart contract dapat dijalankan dengan baik.
 
@@ -145,7 +152,7 @@ Berdasarkan hasil pengujian, program berhasil dijalankan dengan status **passed*
 
 ---
 
-## 2.7 Deployment Smart Contract
+### 2.7 Deployment Smart Contract
 
 Sebelum melakukan deployment, jaringan Solana diubah menjadi jaringan lokal menggunakan perintah:
 
@@ -189,7 +196,7 @@ Program ID tersebut dapat digunakan untuk melihat informasi program melalui **So
 
 ---
 
-# 3. Smart Contract Solana Menggunakan Anchor Framework
+## 3. Smart Contract Solana Menggunakan Anchor Framework
 
 Selain menggunakan metode native Rust, pengembangan smart contract Solana juga dapat dilakukan menggunakan framework **Anchor**.
 
@@ -197,7 +204,7 @@ Anchor merupakan framework yang membantu proses pembuatan smart contract menjadi
 
 ---
 
-## 3.1 Membuat Project Anchor
+### 3.1 Membuat Project Anchor
 
 <p align="center">
 <img width="975" height="906" alt="gambar" src="https://github.com/user-attachments/assets/f9cc51ca-9e09-4863-a81d-fa18daf00100" />
@@ -219,7 +226,7 @@ Project Anchor dibuat untuk menyediakan struktur dasar pengembangan smart contra
 
 ---
 
-## 3.2 Build dan Testing Program Anchor
+### 3.2 Build dan Testing Program Anchor
 
 Proses build dilakukan untuk menghasilkan file program yang siap digunakan.
 
@@ -231,10 +238,9 @@ Proses build dilakukan untuk menghasilkan file program yang siap digunakan.
   <b>Gambar 9.</b> Hasil build program menggunakan Anchor.
 </p>
 
-
 ---
 
-## 3.3 Deployment ke Devnet
+### 3.3 Deployment ke Devnet
 
 Deployment dilakukan menggunakan jaringan **Devnet Solana**.
 
@@ -256,9 +262,9 @@ Setelah deployment berhasil, program akan memiliki **Program ID** yang dapat dig
 
 ---
 
-# 4. Smart Contract Ethereum Menggunakan Hardhat
+## 4. Smart Contract Ethereum Menggunakan Hardhat
 
-## 4.1 Deskripsi
+### 4.1 Deskripsi
 
 Repository ini dibuat untuk memenuhi tugas praktikum **Smart Contract pada Blockchain** dengan mereplikasi tahapan pengembangan smart contract menggunakan blockchain **Ethereum** sebagai alternatif dari implementasi Solana pada modul praktikum.
 
@@ -266,7 +272,7 @@ Pengembangan smart contract dilakukan menggunakan **Hardhat** sebagai framework 
 
 ---
 
-# Struktur Repository
+### Struktur Repository
 
 ```text
 tugas_ethereum/
@@ -285,7 +291,7 @@ tugas_ethereum/
 
 ---
 
-## 4.2 Membuat Proyek Hardhat
+### 4.2 Membuat Proyek Hardhat
 
 Langkah pertama yakni membuat proyek baru menggunakan Hardhat.
 
@@ -311,7 +317,7 @@ Gambar 12 memperlihatkan proses pembuatan proyek menggunakan Hardhat. Setelah pr
 
 ---
 
-## 4.3 Membuat Smart Contract
+### 4.3 Membuat Smart Contract
 
 Setelah proyek berhasil dibuat, langkah selanjutnya adalah membuat direktori `contracts` dan menambahkan file **HelloWorld.sol**.
 
@@ -335,7 +341,7 @@ Gambar 13 menunjukkan proses penulisan smart contract menggunakan bahasa Solidit
 
 ---
 
-## 4.4 Konfigurasi Hardhat
+### 4.4 Konfigurasi Hardhat
 
 Hardhat memerlukan file konfigurasi agar mengetahui versi compiler Solidity yang digunakan.
 
@@ -351,7 +357,7 @@ Gambar 14 menunjukkan konfigurasi Hardhat dengan compiler Solidity versi **0.8.2
 
 ---
 
-## 4.5 Kompilasi Smart Contract
+### 4.5 Kompilasi Smart Contract
 
 Setelah smart contract selesai dibuat, langkah berikutnya adalah melakukan kompilasi menggunakan Hardhat.
 
@@ -377,6 +383,6 @@ Gambar 15 menunjukkan bahwa source code dapat diterjemahkan menjadi bytecode Eth
 
 ---
 
-# Kesimpulan
+### Kesimpulan
 
 Implementasi smart contract menggunakan Ethereum berhasil dilakukan menggunakan framework Hardhat. Tahapan yang dilakukan meliputi pembuatan proyek, penulisan smart contract menggunakan Solidity, konfigurasi compiler, serta proses kompilasi. Hasil kompilasi menunjukkan bahwa smart contract berhasil dibangun.
