@@ -92,9 +92,7 @@ cargo build-sbf
 <p align="center">
 <img width="938" height="239" alt="gambar" src="https://github.com/user-attachments/assets/c9e1e026-56da-4e3a-bc4c-6f93bf20f6c4" />
 </p>
-<p align="center">
-<img width="748" height="992" alt="gambar" src="https://github.com/user-attachments/assets/4cc18b59-a2ec-41c3-baab-987aa724187d" />
-</p>
+
 <p align="center">
 <img width="975" height="365" alt="gambar" src="https://github.com/user-attachments/assets/fbeff969-8ae1-4703-9406-9f00a384e85c" />
 </p>
